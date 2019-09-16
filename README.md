@@ -1,4 +1,7 @@
 # basedradio
 Web-based Infinite VGM Playlist 
 
-This is a WIP and not ready for deployment.
+TODO:
+- Make deployment script
+- Documentation
+- Make python api more portable/system agnostic
