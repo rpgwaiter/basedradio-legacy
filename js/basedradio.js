@@ -1,7 +1,7 @@
 // Load config file
-$.getScript("config.js", function() {
-    alert("Script loaded but not necessarily executed.");
-});
+import { Config } from "./config.js";
+
+siteConfig = new Config();
 
 function loadBackground() {
     $("body")[0].hasAttribute("lite") ?
@@ -49,7 +49,7 @@ function updateBackground(e) {
             (current_background = e),
             t.css(
                 "background-image",
-                "url(/radio/img/backs/" + backgrounds[e][0] + ")"
+                "url(" + siteConfig.siteroot + "/img/backs/" + backgrounds[e][0] + ")"
             ),
             //"" !== backgrounds[e][1] ? $("#background-author").html('<a href="' + backgrounds[e][2] + '" target="blank">' + backgrounds[e][1] + "</a>") : $("#background-author").html(""),
             //"" !== backgrounds[e][3] ? $("#background-source").html('<a href="' + backgrounds[e][4] + '" target="blank">' + backgrounds[e][3] + "</a>") : $("#background-source").html("")
@@ -225,7 +225,7 @@ function pullWindow(e) {
 var Client = {
         onStatus: {},
         onFail: {},
-        url: "https://api.based.zone/status",
+        url: Config.apiLink,
         interval: 10,
         timeout: {},
         init: function() {
@@ -364,14 +364,14 @@ var Client = {
         var e = this;
         this.context.resume().then(function() {
             ($audio_element.type = "audio/mpeg"),
-            ($audio_element.src = "https://radio.based.zone/files/basedvgm.mp3"), !(!$audio_element.canPlayType ||
+            ($audio_element.src = Config.mp3Stream), !(!$audio_element.canPlayType ||
                 !$audio_element
                 .canPlayType('audio/ogg; codecs="vorbis"')
                 .replace(/no/, "")
             ) &&
-            (($audio_element.type = 'audio/ogg; codecs="vorbis"'),
+            (($audio_element.type = 'audio/ogg; codecs="opus"'),
                 ($audio_element.src =
-                    "https://radio.based.zone/files/basedvgm.ogg")),
+                    Config.opusStream)),
             $audio_element.load(),
                 ($audio_element.volume = e.volume / 100);
         });
@@ -387,7 +387,7 @@ var Client = {
                     clearTimeout(this.restartTimer),
                     $player_play.removeAttr("disabled"),
                     $player_play.html("Play"),
-                    $title.text("BasedRadio - Video Game Music Stream");
+                    $title.text(Config.siteTitle);
                 break;
             case "paused":
                 (song.state = "loading"),
@@ -462,7 +462,7 @@ var Client = {
     updateForm: function() {
         $player_artist.html(song.game),
             $player_title.html(song.title),
-            $player_artwork.attr("src", "/filehost/radiofiles/" + song.artwork),
+            $player_artwork.attr("src", siteConfig.radiofiles + "/" + song.artwork),
             $song_dl_link.attr("href", "/" + song.link),
             $more_title.text("Title: " + more.title),
             $more_game.text("Game: " + more.game),
