@@ -1,0 +1,717 @@
+
+
+@font-face {
+	font-family: plaza-icons;
+	src: url(../fonts/icons/plaza-iconscb74.eot?69664127);
+	src: url(../fonts/icons/plaza-iconscb74.eot?69664127#iefix) format("embedded-opentype"), url(../fonts/icons/plaza-iconscb74.woff2?69664127) format("woff2"), url(../fonts/icons/plaza-iconscb74.woff?69664127) format("woff"), url(../fonts/icons/plaza-iconscb74.ttf?69664127) format("truetype"), url(../fonts/icons/plaza-iconscb74.svg?69664127#plaza-icons) format("svg");
+	font-weight: 400;
+	font-style: normal
+}
+
+[class*=" icon-"]:before,
+[class^=icon-]:before {
+	font-family: plaza-icons;
+	font-style: normal;
+	font-weight: 400;
+	speak: none;
+	font-size: 12px;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: 0;
+	text-align: center;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	margin-left: .2em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+
+.icon-clock:before {
+	content: "\e800"
+}
+
+.icon-heart:before {
+	content: "\e801"
+}
+
+.icon-star:before {
+	content: "\e802"
+}
+
+.icon-heart-broken:before {
+	content: "\f028"
+}
+
+.icon-heart,
+.icon-heart-broken,
+.icon-star {
+	text-shadow: 1px 1px 0 #999
+}
+
+#window-about .window {
+	width: 497px
+}
+
+#window-about .win98 {
+	height: 100%;
+	overflow-y: auto
+}
+
+.win98 .window.window-about {
+	margin: 0 auto
+}
+
+.win98 .window.window-about .lead {
+	font-size: 14px;
+	line-height: 14px;
+	margin: 16px 0 6px;
+	font-weight: 700
+}
+
+.win98 .window.window-about p {
+	font-size: 12px;
+	line-height: 150%
+}
+
+.win98 .window.window-about a {
+	color: #0645ad;
+	text-decoration: underline
+}
+
+img.plaza-win {
+	border-radius: 50%;
+	background: #fff;
+	width: 96px;
+	height: 96px;
+	padding: 0;
+	margin: 0 12px 0 0
+}
+
+#window-loading {
+	z-index: 4
+}
+
+.win98 .window.window-loading {
+	width: 220px;
+	max-width: 220px
+}
+
+.win98 .window.window-loading .content {
+	padding: 10px
+}
+
+#window-ratings .win98 {
+	height: 100%!important;
+	max-height: 600px
+}
+
+#window-ratings .win98 .window {
+	width: 400px;
+	height: 100%!important
+}
+
+#window-ratings .win98 .inner {
+	height: 100%!important
+}
+
+#window-ratings .win98 .content {
+	position: absolute!important;
+	top: 21px;
+	right: 1px;
+	left: 1px;
+	bottom: 23px
+}
+
+.ratings-content {
+	position: absolute;
+	top: 38px;
+	left: 6px;
+	bottom: 36px;
+	right: 6px;
+	border: 1px solid gray;
+	border-right-color: #fff;
+	border-bottom-color: #dfdfdf
+}
+
+.song-list {
+	min-height: 100%;
+	list-style: none;
+	margin: 0 16px 0 0;
+	background: #fff;
+	padding: 0 3px
+}
+
+.song-list li {
+	padding: 3px;
+	border-bottom: 1px dashed #c8c8c8
+}
+
+.song-list li:last-child {
+	border-bottom: none
+}
+
+.song-list-song {
+	padding-left: 12px;
+	overflow: hidden
+}
+
+.song-list-artist {
+	font-weight: 700
+}
+
+.song-list-buttons {
+	position: absolute;
+	bottom: 3px;
+	left: 3px;
+	right: 3px
+}
+
+.song-list-pagination {
+	font-size: 0
+}
+
+.song-list-pagination button {
+	display: inline-block;
+	width: 24px;
+	margin-right: 3px
+}
+
+.ratings-buttons button.active,
+.song-list-pagination button.active {
+	box-shadow: inset 1px 1px 0 0 #000;
+	border-top-color: gray;
+	border-left-color: gray;
+	border-right-color: #dfdfdf;
+	border-bottom-color: #dfdfdf
+}
+
+#window-ratings .status-bar {
+	position: absolute!important;
+	height: 20px;
+	bottom: 0;
+	left: 0;
+	right: 0
+}
+
+#window-user-favorites {
+	height: 100%!important;
+	max-height: 600px
+}
+
+#window-user-favorites .window {
+	width: 460px;
+	height: 100%!important
+}
+
+#window-user-favorites .inner {
+	height: 100%!important
+}
+
+.window-user-favorites .content {
+	position: absolute!important;
+	top: 21px;
+	right: 1px;
+	left: 1px;
+	bottom: 23px
+}
+
+.favorites-content {
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	bottom: 36px;
+	right: 6px;
+	border: 1px solid gray;
+	border-right-color: #fff;
+	border-bottom-color: #dfdfdf
+}
+
+.favorites-content-noitems {
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	right: 1px;
+	bottom: 1px;
+	padding-top: 15px;
+	text-align: center;
+	background: #fff
+}
+
+.favorites-list {
+	min-height: 100%;
+	list-style: none;
+	margin: 0 16px 0 0;
+	background: #fff;
+	padding: 0 3px
+}
+
+.favorites-list li {
+	padding: 3px;
+	border-bottom: 1px dashed #c8c8c8
+}
+
+.favorites-list li:last-child {
+	border-bottom: none
+}
+
+.favorites-song {
+	padding-left: 6px;
+	overflow: hidden;
+	margin-right: 48px
+}
+
+.favorites-artist {
+	font-weight: 700
+}
+
+.favorites-remove {
+	line-height: 26px
+}
+
+.favorites-buttons {
+	position: absolute;
+	bottom: 3px;
+	left: 3px;
+	right: 3px
+}
+
+.favorites-list-pagination {
+	font-size: 0
+}
+
+.favorites-list-pagination button {
+	display: inline-block;
+	width: 24px;
+	margin-right: 3px
+}
+
+.favorites-list-pagination button.active {
+	box-shadow: inset 1px 1px 0 0 #000;
+	border-top-color: gray;
+	border-left-color: gray;
+	border-right-color: #dfdfdf;
+	border-bottom-color: #dfdfdf
+}
+
+.window-user-favorites .status-bar {
+	position: absolute!important;
+	height: 18px;
+	bottom: 0;
+	left: 0;
+	right: 0
+}
+
+.win98 .window.window-user-reset {
+	width: 230px
+}
+
+.window-user-reset .row {
+	margin-left: -4px;
+	margin-right: -4px
+}
+
+.win98 .window.window-settings {
+	width: 220px!important
+}
+
+.settings-title {
+	font-weight: 700;
+	text-align: center
+}
+
+#background-id {
+	text-align: center;
+	overflow: hidden;
+	margin-top: 8px
+}
+
+.solid-top {
+	background: teal
+}
+
+#window-login .window {
+	width: 490px
+}
+
+.login-field label {
+	display: block;
+	line-height: 21px
+}
+
+.login-field label:last-child {
+	margin-bottom: 8px
+}
+
+.img-key {
+	margin-top: 2px;
+	width: 45px;
+	height: 48px
+}
+
+#window-register .window {
+	width: 420px
+}
+
+.field-box {
+	margin-bottom: 3px
+}
+
+.field-box label {
+	display: block;
+	line-height: 21px;
+	margin: 0
+}
+
+.field-box input {
+	width: 100%
+}
+
+.win98 .window.window-register p {
+	margin: 0 0 12px
+}
+
+.win98 .window.window-register .lead {
+	font-size: 14px;
+	margin: 20px 0 16px;
+	font-weight: 700
+}
+
+.img-register {
+	width: 120px;
+	height: auto;
+	max-width: 100%
+}
+
+button.button-register {
+	min-width: 100px
+}
+
+#window-minimized {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 300px
+}
+
+#window-minimized .window {
+	width: 100%
+}
+
+@media (max-width:500px) {
+	.login-form label {
+		line-height: 100%
+	}
+	.login-form input {
+		margin-bottom: 12px;
+		width: 70%
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-smooth: never;
+	-webkit-font-smoothing: none;
+	-moz-osx-font-smoothing: none;
+	cursor: default
+}
+
+body,
+html {
+	height: 100%;
+	-webkit-text-size-adjust: 100%
+}
+
+body {
+	background: teal no-repeat fixed 50%;
+	background-size: cover;
+	min-height: 100%;
+	color: #070707;
+	font-family: Tahoma, Verdana, Segoe, ヒラギノ角ゴ ProN W3, Hiragino Kaku Gothic ProN, メイリオ, Meiryo, sans-serif;
+	font-size: 11px;
+	position: relative;
+	overflow: hidden
+}
+
+.no-padding {
+	padding: 0
+}
+
+.text-center {
+	text-align: center
+}
+
+.text-right {
+	text-align: right
+}
+
+.flex-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 100%
+}
+
+.win-flex {
+	flex: 1;
+	padding: 1% 2%
+}
+
+.status-bar {
+	padding: 1px 3px 1px 5px;
+	font-size: 11px;
+	line-height: 16px;
+	border: 1px solid gray;
+	border-right-color: #fff;
+	border-bottom-color: #fff;
+	margin: 0 2px 2px;
+	position: relative
+}
+
+.status-bar .cell,
+.status-bar .separator {
+	float: left
+}
+
+#statusbar-username {
+	max-width: 124px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap
+}
+
+.status-bar .separator {
+	background: #bfbfbf;
+	margin: -1px 6px 0;
+	height: 20px;
+	width: 4px;
+	border-left: 1px solid #fff;
+	border-right: 1px solid gray
+}
+
+.status-bar img {
+	width: 12px;
+	height: 16px;
+	position: absolute;
+	right: 0;
+	bottom: 0
+}
+
+button.close {
+	display: block;
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.social-buttons {
+	position: fixed;
+	bottom: 10px;
+	right: 20px
+}
+
+.playstore-button img {
+	height: 50px;
+	cursor: pointer
+}
+
+.social-buttons .win98-button img {
+	height: 32px
+}
+
+.win98 .window {
+	z-index: 3
+}
+
+.win98 .window .header .icon {
+	background: url(../img/icons/favicon-32x32.png) no-repeat;
+	background-size: cover
+}
+
+.win98 button,
+.win98 button i,
+.win98 button span {
+	cursor: pointer
+}
+
+.win98 .window .status-bar {
+	line-height: 18px
+}
+
+@media (max-width:500px) {
+	.win98 .window {
+		width: 100%!important
+	}
+	.social-buttons {
+		top: 10px
+	}
+}
+
+#window-player .win98 .window {
+	width: 500px
+}
+
+.player-artwork {
+	background: #efe6eb;
+	padding: 0;
+	margin: 9px 0 9px 9px;
+	line-height: 0;
+	height: auto;
+	border: 1px solid;
+	border-top-color: gray;
+	border-left-color: gray;
+	border-bottom-color: #dfdfdf;
+	border-right-color: #dfdfdf
+}
+
+.player-artwork img {
+	width: 100%;
+	height: 100%
+}
+
+.player-meta {
+	margin: 9px 6px
+}
+
+.player-artist, .player-game {
+	font-weight: 700;
+	margin: 0 0 3px;
+	font-size: 14px
+}
+
+.player-title, .player-subtitle {
+	padding-bottom: 6px;
+	font-size: 14px
+}
+
+.player-time-container {
+	margin: 6px 0 3px;
+	border: 1px solid gray;
+	border-right-color: #dfdfdf;
+	border-bottom-color: #dfdfdf;
+	position: relative
+}
+
+.player-visual {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	position: absolute
+}
+
+.player-time {
+	position: relative;
+	z-index: 2;
+	line-height: 24px;
+	font-size: 14px;
+	text-align: center
+}
+
+.player-button i,
+.player-button span {
+	cursor: pointer
+}
+
+.player-volume {
+	height: 26px
+}
+
+.player-volume-icon {
+	width: 11px;
+	height: 16px;
+	float: right;
+	margin: 3px 0 0;
+	line-height: 26px;
+	text-align: center
+}
+
+.player-volume-icon img {
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: 0
+}
+
+.player-volume-control {
+	margin: 0 15px 0 0;
+	padding-top: 11px;
+	height: 26px
+}
+
+.minimized {
+	background-image: url(../img/maximize-icon.png)!important
+}
+
+.maximized {
+	background-image: url(../img/minimize-icon.png)!important
+}
+
+.noUi-target {
+	height: 4px;
+	background: #151515;
+	border: 1px solid;
+	border-width: 1px 2px 2px 1px;
+	border-top-color: #9d9d9d;
+	border-left-color: #9d9d9d;
+	border-right-color: #ccc;
+	border-bottom-color: #ccc;
+	border-radius: 0;
+	box-shadow: none;
+	margin: 0 6px
+}
+
+.noUi-horizontal .noUi-handle {
+	width: 12px;
+	left: -6px;
+	height: 24px;
+	top: -2px;
+	border-radius: 0;
+	background: #bfbfbf;
+	border: 1px solid;
+	border-top-color: #dfdfdf;
+	border-left-color: #dfdfdf;
+	border-right-color: gray;
+	border-bottom-color: gray;
+	box-shadow: 1px 1px 0 0 #000;
+	text-align: center;
+	outline: none;
+	padding: 4px;
+	cursor: pointer
+}
+
+.noUi-handle:after,
+.noUi-handle:before {
+	display: none
+}
+
+html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
+	right: -7px
+}
+
+.noUi-base {
+	padding: 10px 0;
+	margin-top: -10px
+}
+
+@media (max-width:500px) {
+	.player-artwork {
+		margin: 0 0 6px!important
+	}
+	.player-artist {
+		margin: 0 0 3px
+	}
+}
