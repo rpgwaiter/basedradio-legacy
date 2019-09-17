@@ -483,7 +483,7 @@ var Client = {
     updateForm: function() {
         $player_artist.html(song.game),
             $player_title.html(song.title),
-            $player_artwork.attr("src", siteConfig.radioFiles + "/" + song.artwork),
+            $player_artwork.attr("src", "" + siteConfig.radioFiles + "/" + song.artwork),
             $song_dl_link.attr("href", "/" + song.link),
             $more_title.text("Title: " + more.title),
             $more_game.text("Game: " + more.game),
