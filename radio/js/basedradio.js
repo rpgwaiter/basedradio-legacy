@@ -2,28 +2,25 @@
 This is the BasedRadio Config
 Fill this out and all your dreams will come true */
 
-class Config {
-    constructor() {
-        /*URL Prefix for the radio
-               For example, if your site's URL is https://based.zone ,
-               siteroot = "/radio" would setup basedradio at https://based.zone/radio */
-        this.siteRoot = "/radio";
-        // Site Title
-        this.siteTitle = "BasedRadio - Video Game Music Stream";
-        // Directory where the radio files reside at
-        this.radioFiles = "/filehost/radiofiles";
-        // Opus Audio Source (Casted through Icecast or similar)
-        this.opusStream = "https://radio.based.zone/files/basedvgm.ogg";
-        // MP3 Audio Source (not as good as Opus)
-        this.mp3Stream = "https://radio.based.zone/files/basedvgm.mp3";
-        // Link to BasedRadio API
-        this.apiLink = "https://api.based.zone/status";
-    }
-}
+
+/*URL Prefix for the radio
+       For example, if your site's URL is https://based.zone ,
+       siteroot = "/radio" would setup basedradio at https://based.zone/radio */
+siteRoot = "/radio";
+// Site Title
+siteTitle = "BasedRadio - Video Game Music Stream";
+// Directory where the radio files reside at
+radioFiles = "/filehost/radiofiles";
+// Opus Audio Source (Casted through Icecast or similar)
+opusStream = "https://radio.based.zone/files/basedvgm.ogg";
+// MP3 Audio Source (not as good as Opus)
+mp3Stream = "https://radio.based.zone/files/basedvgm.mp3";
+// Link to BasedRadio API
+apiLink = "https://api.based.zone/status";
 
 /****************************************************************************/
 
-siteConfig = new Config();
+
 
 function loadBackground() {
     $("body")[0].hasAttribute("lite") ?
@@ -71,7 +68,7 @@ function updateBackground(e) {
             (current_background = e),
             t.css(
                 "background-image",
-                "url(" + siteConfig.siteRoot + "/img/backs/" + backgrounds[e][0] + ")"
+                "url(" + siteRoot + "/img/backs/" + backgrounds[e][0] + ")"
             ),
             //"" !== backgrounds[e][1] ? $("#background-author").html('<a href="' + backgrounds[e][2] + '" target="blank">' + backgrounds[e][1] + "</a>") : $("#background-author").html(""),
             //"" !== backgrounds[e][3] ? $("#background-source").html('<a href="' + backgrounds[e][4] + '" target="blank">' + backgrounds[e][3] + "</a>") : $("#background-source").html("")
@@ -247,7 +244,7 @@ function pullWindow(e) {
 var Client = {
         onStatus: {},
         onFail: {},
-        url: siteConfig.apiLink,
+        url: apiLink,
         interval: 10,
         timeout: {},
         init: function() {
@@ -386,13 +383,13 @@ var Client = {
         var e = this;
         this.context.resume().then(function() {
             ($audio_element.type = "audio/mpeg"),
-            ($audio_element.src = siteConfig.mp3Stream), !(!$audio_element.canPlayType ||
+            ($audio_element.src = mp3Stream), !(!$audio_element.canPlayType ||
                 !$audio_element
                 .canPlayType('audio/ogg; codecs="vorbis"')
                 .replace(/no/, "")
             ) &&
             (($audio_element.type = 'audio/ogg; codecs="opus"'),
-                ($audio_element.src = siteConfig.opusStream)),
+                ($audio_element.src = opusStream)),
             $audio_element.load(),
                 ($audio_element.volume = e.volume / 100);
         });
@@ -408,7 +405,7 @@ var Client = {
                     clearTimeout(this.restartTimer),
                     $player_play.removeAttr("disabled"),
                     $player_play.html("Play"),
-                    $title.text(siteConfig.siteTitle);
+                    $title.text(siteTitle);
                 break;
             case "paused":
                 (song.state = "loading"),
@@ -483,7 +480,7 @@ var Client = {
     updateForm: function() {
         $player_artist.html(song.game),
             $player_title.html(song.title),
-            $player_artwork.attr("src", "" + siteConfig.radioFiles + "/" + song.artwork),
+            $player_artwork.attr("src", radioFiles + "/" + song.artwork),
             $song_dl_link.attr("href", "/" + song.link),
             $more_title.text("Title: " + more.title),
             $more_game.text("Game: " + more.game),
