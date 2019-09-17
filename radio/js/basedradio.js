@@ -203,10 +203,10 @@ function registerEvents() {
         $("#info-toggle").on("click", function() {
             ($m = $("#more-info")),
             ($l = $("#less-info")),
-            ($t = $("#info-toggle")), jpg
-            $m.is(":visible") ? jpg
-            $m.hide() && $l.show() && $t.text("More Info") jpg:
-                $m.show() && $l.hide() && $t.text("Less Info") jpg;
+            ($t = $("#info-toggle")),
+            $m.is(":visible") ?
+                $m.hide() && $l.show() && $t.text("More Info") :
+                $m.show() && $l.hide() && $t.text("Less Info");
         });
     window_about.registerEvents(),
         window_updates.registerEvents(),
