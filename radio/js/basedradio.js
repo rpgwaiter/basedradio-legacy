@@ -247,7 +247,7 @@ function pullWindow(e) {
 var Client = {
         onStatus: {},
         onFail: {},
-        url: Config.apiLink,
+        url: siteConfig.apiLink,
         interval: 10,
         timeout: {},
         init: function() {
@@ -386,13 +386,13 @@ var Client = {
         var e = this;
         this.context.resume().then(function() {
             ($audio_element.type = "audio/mpeg"),
-            ($audio_element.src = Config.mp3Stream), !(!$audio_element.canPlayType ||
+            ($audio_element.src = siteConfig.mp3Stream), !(!$audio_element.canPlayType ||
                 !$audio_element
                 .canPlayType('audio/ogg; codecs="vorbis"')
                 .replace(/no/, "")
             ) &&
             (($audio_element.type = 'audio/ogg; codecs="opus"'),
-                ($audio_element.src = Config.opusStream)),
+                ($audio_element.src = siteConfig.opusStream)),
             $audio_element.load(),
                 ($audio_element.volume = e.volume / 100);
         });
@@ -408,7 +408,7 @@ var Client = {
                     clearTimeout(this.restartTimer),
                     $player_play.removeAttr("disabled"),
                     $player_play.html("Play"),
-                    $title.text(Config.siteTitle);
+                    $title.text(siteConfig.siteTitle);
                 break;
             case "paused":
                 (song.state = "loading"),
