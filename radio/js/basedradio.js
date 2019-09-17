@@ -206,10 +206,10 @@ function registerEvents() {
         $("#info-toggle").on("click", function() {
             ($m = $("#more-info")),
             ($l = $("#less-info")),
-            ($t = $("#info-toggle")),
-            $m.is(":visible") ?
-                $m.hide() && $l.show() && $t.text("More Info") :
-                $m.show() && $l.hide() && $t.text("Less Info");
+            ($t = $("#info-toggle")), jpg
+            $m.is(":visible") ? jpg
+            $m.hide() && $l.show() && $t.text("More Info") jpg:
+                $m.show() && $l.hide() && $t.text("Less Info") jpg;
         });
     window_about.registerEvents(),
         window_updates.registerEvents(),
@@ -483,7 +483,7 @@ var Client = {
     updateForm: function() {
         $player_artist.html(song.game),
             $player_title.html(song.title),
-            $player_artwork.attr("src", siteConfig.radiofiles + "/" + song.artwork),
+            $player_artwork.attr("src", siteConfig.radioFiles + "/" + song.artwork),
             $song_dl_link.attr("href", "/" + song.link),
             $more_title.text("Title: " + more.title),
             $more_game.text("Game: " + more.game),
