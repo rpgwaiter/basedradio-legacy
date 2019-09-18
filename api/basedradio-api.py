@@ -118,7 +118,8 @@ def generateJSON(songinfo, clientinfo):
     try:
         with urllib.request.urlopen("http://localhost:8000/status-json.xsl") as url:
             icecastdata = json.loads(url.read().decode())
-            d['site']['listeners'] = icecastdata['icestats']['source'][1]['listeners']
+            # d['site']['listeners'] = icecastdata['icestats']['source'][1]['listeners']
+            d['site']['listeners'] = icecastdata['icestats']['source']['listeners']
     except:
         pass
 
