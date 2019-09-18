@@ -2,7 +2,6 @@
 This is the BasedRadio Config
 Fill this out and all your dreams will come true */
 
-
 /*URL Prefix for the radio
        For example, if your site's URL is https://based.zone ,
        siteroot = "/radio" would setup basedradio at https://based.zone/radio */
@@ -19,8 +18,6 @@ mp3Stream = "https://radio.based.zone/files/basedvgm.mp3";
 apiLink = "https://api.based.zone/status";
 
 /****************************************************************************/
-
-
 
 function loadBackground() {
     $("body")[0].hasAttribute("lite") ?
