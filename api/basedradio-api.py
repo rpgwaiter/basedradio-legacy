@@ -25,28 +25,22 @@ big_timer = 0
 
 # Generates update string
 def getUpdates():
-    niceupdates = ""
+    niceupdates = "Failed to fetch updates."
 
     # If the update file exists, build return string
     if os.path.isfile(update_file):
-        with open(update_file) as f:
-            line = f.readline()
-            while line:
-                niceupdates += "- {0}\n".format(line)
+        niceupdates = [line.rstrip('\n') for line in open(update_file)]
 
     return niceupdates
 
 
 # Generates todo string
 def getTodo():
-    nicetodo = ""
+    niceupdates = "Failed to fetch todo."
 
     # If the update file exists, build return string
-    if os.path.isfile(todo_file):
-        with open(todo_file) as f:
-            line = f.readline()
-            while line:
-                nicetodo += "- {0}\n".format(line)
+    if os.path.isfile(update_file):
+        nicetodo = [line.rstrip('\n') for line in open(todo_file)]
 
     return nicetodo
 
