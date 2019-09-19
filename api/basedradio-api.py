@@ -36,7 +36,7 @@ def getUpdates():
 
 # Generates todo string
 def getTodo():
-    niceupdates = "Failed to fetch todo."
+    nicetodo = "Failed to fetch todo."
 
     # If the update file exists, build return string
     if os.path.isfile(update_file):
