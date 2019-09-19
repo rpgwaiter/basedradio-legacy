@@ -15,8 +15,8 @@ from datetime import datetime
 #####################################
 # CONFIG
 #####################################
-update_file = updates.txt
-todo_file = todo.txt
+update_file = "updates.txt"
+todo_file = "todo.txt"
 #####################################
 
 # Globals are fun
