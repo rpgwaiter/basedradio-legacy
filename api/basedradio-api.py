@@ -12,45 +12,44 @@ from objdict import ObjDict
 from datetime import datetime
 
 
+#####################################
+# CONFIG
+#####################################
+update_file = updates.txt
+todo_file = todo.txt
+#####################################
+
 # Globals are fun
 big_timer = 0
 
 
 # Generates update string
 def getUpdates():
-    ul = []
-    # Least recent update
-    # updatelist.insert(0, "[23JUL2019] Added this update page")
-    ul.insert(0, "[23JUL2019] New Wallpapers (Mostly PC-98)")
-    ul.insert(0, "[24JUL2019] Added game art")
-    ul.insert(0, "[24JUL2019] API 4.2 (Dynamic updating of api)")
-    ul.insert(0, "[25JUL2019] API 4.3 (Automatically adds new songs)")
-    ul.insert(0, "[25JUL2019] New about page & minified/optmiized code")
-    ul.insert(0, "[25JUL2019] More/Less info buttons. API 5.0 with new fields")
-    ul.insert(0, "[24AUG2019] Site moved from /main/radio to /radio")
-    ul.insert(0, "[28AUG2019] API 5.1, code easier to maintain")
-    # Most recent update
-
     niceupdates = ""
-    for update in ul:
-        niceupdates += "- {0}\n".format(update)
+
+    # If the update file exists, build return string
+    if update_file.is_file():
+        with open(update_file) as f:
+            ul.insert(0, f.readlines())
+            niceupdates += "- {0}\n".format(f.readlines())
+
     return niceupdates
 
 
 # Generates todo string
 def getTodo():
-    tl = []
-    tl.insert(0, "Anchor buttons to the bottom of window")
-    tl.insert(0, "Remove all cookies")
-
     nicetodo = ""
-    for todo in tl:
-        nicetodo += "- {0}\n".format(todo)
+
+    # If the update file exists, build return string
+    if todo_file.is_file():
+        with open(todo_file) as f:
+            ul.insert(0, f.readlines())
+            nicetodo += "- {0}\n".format(f.readlines())
+
     return nicetodo
 
+
 # Get total number of songs in playlist
-
-
 def getNumSongs(m):
     num_songs = int(m.stats()['songs']) if m else 0
     return num_songs
