@@ -28,7 +28,7 @@ def getUpdates():
     niceupdates = ""
 
     # If the update file exists, build return string
-    if update_file.is_file():
+    if os.path.isfile(update_file):
         with open(update_file) as f:
             ul.insert(0, f.readlines())
             niceupdates += "- {0}\n".format(f.readlines())
@@ -41,7 +41,7 @@ def getTodo():
     nicetodo = ""
 
     # If the update file exists, build return string
-    if todo_file.is_file():
+    if os.path.isfile(todo_file):
         with open(todo_file) as f:
             ul.insert(0, f.readlines())
             nicetodo += "- {0}\n".format(f.readlines())
