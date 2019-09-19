@@ -30,7 +30,9 @@ def getUpdates():
     # If the update file exists, build return string
     if os.path.isfile(update_file):
         with open(update_file) as f:
-            niceupdates += "- {0}\n".format(f.readlines().rstrip('\n'))
+            line = f.readline()
+            while line:
+                niceupdates += "- {0}\n".format(line)
 
     return niceupdates
 
@@ -42,7 +44,9 @@ def getTodo():
     # If the update file exists, build return string
     if os.path.isfile(todo_file):
         with open(todo_file) as f:
-            nicetodo += "- {0}\n".format(f.readlines().rstrip('\n'))
+            line = f.readline()
+            while line:
+                nicetodo += "- {0}\n".format(line)
 
     return nicetodo
 
