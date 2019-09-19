@@ -83,6 +83,8 @@ def removeExt(title):
         out_title = title.replace(".flac", "").split('/')[-1:]
     elif title.endswith('.opus'):
         out_title = title.replace(".opus", "").split('/')[-1:]
+    elif title.endswith('.m4a'):
+        out_title = title.replace(".m4a", "").split('/')[-1:]
 
     return out_title
 
