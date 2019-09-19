@@ -15,6 +15,7 @@ from datetime import datetime
 #####################################
 # CONFIG
 #####################################
+# (for now) These file paths need to be absolute paths
 update_file = "updates.txt"
 todo_file = "todo.txt"
 #####################################
