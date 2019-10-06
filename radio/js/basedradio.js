@@ -65,7 +65,7 @@ function updateBackground(e) {
             (current_background = e),
             t.css(
                 "background-image",
-                "url(" + siteRoot + "/img/backs/" + backgrounds[e][0] + ")"
+                "url(" + siteRoot + "img/backs/" + backgrounds[e][0] + ")"
             ),
             //"" !== backgrounds[e][1] ? $("#background-author").html('<a href="' + backgrounds[e][2] + '" target="blank">' + backgrounds[e][1] + "</a>") : $("#background-author").html(""),
             //"" !== backgrounds[e][3] ? $("#background-source").html('<a href="' + backgrounds[e][4] + '" target="blank">' + backgrounds[e][3] + "</a>") : $("#background-source").html("")
