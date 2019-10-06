@@ -478,7 +478,7 @@ var Client = {
         $player_artist.html(song.game),
             $player_title.html(song.title),
             $player_artwork.attr("src", radioFiles + "/" + song.artwork),
-            $song_dl_link.attr("href", "/" + song.link),
+            $song_dl_link.attr("href", "https://based.zone/" + song.link),
             $more_title.text("Title: " + more.title),
             $more_game.text("Game: " + more.game),
             $more_year.text("Year: " + more.year),
