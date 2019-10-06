@@ -9,7 +9,7 @@ siteRoot = "/";
 // Site Title
 siteTitle = "BasedRadio - Video Game Music Stream";
 // Directory where the radio files reside at
-radioFiles = "/filehost/radiofiles";
+radioFiles = "https://based.zone/filehost/radiofiles";
 // Opus Audio Source (Casted through Icecast or similar)
 opusStream = "https://radio.based.zone/files/basedvgm.ogg";
 // MP3 Audio Source (not as good as Opus)
