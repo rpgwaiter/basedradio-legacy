@@ -5,17 +5,21 @@ Fill this out and all your dreams will come true */
 /*URL Prefix for the radio
        For example, if your site's URL is https://based.zone ,
        siteroot = "/radio" would setup basedradio at https://based.zone/radio */
-siteRoot = "/";
+var siteRoot = "/";
 // Site Title
-siteTitle = "BasedRadio - Video Game Music Stream";
+var siteTitle = "Viper Radio";
 // Directory where the radio files reside at
-radioFiles = "https://based.zone/filehost/radiofiles";
+var radioFiles = "https://based.zone/filehost/radiofiles";
 // Opus Audio Source (Casted through Icecast or similar)
-opusStream = "https://radio.based.zone/files/basedvgm.ogg";
+var opusStream = "https://radio.based.zone/files/viper.ogg";
 // MP3 Audio Source (not as good as Opus)
-mp3Stream = "https://radio.based.zone/files/basedvgm.mp3";
+var mp3Stream = "https://radio.based.zone/files/basedvgm.mp3";
 // Link to BasedRadio API
-apiLink = "https://api.based.zone/status";
+var apiLink = "https://api.based.zone/viperstatus";
+
+var backgrounds = [
+    
+],
 
 /****************************************************************************/
 
@@ -55,8 +59,8 @@ function updateBackground(e) {
             return (
                 $("body").css("background-image", "none"),
                 $("#background-id").html("Solid"),
-                $("#background-game").text("Windows 95"),
-                $("#background-system").text("Yes")
+                //$("#background-game").text("Windows 95"),
+                //$("#background-system").text("Yes")
             );
 
         "random" === e &&
@@ -65,12 +69,11 @@ function updateBackground(e) {
             (current_background = e),
             t.css(
                 "background-image",
-                "url(" + siteRoot + "img/backs/" + backgrounds[e][0] + ")"
-            ),
-            //"" !== backgrounds[e][1] ? $("#background-author").html('<a href="' + backgrounds[e][2] + '" target="blank">' + backgrounds[e][1] + "</a>") : $("#background-author").html(""),
-            //"" !== backgrounds[e][3] ? $("#background-source").html('<a href="' + backgrounds[e][4] + '" target="blank">' + backgrounds[e][3] + "</a>") : $("#background-source").html("")
-            $("#background-game").text(backgrounds[e][1]),
-            $("#background-system").text(backgrounds[e][3]);
+                //"url(" + siteRoot + "img/backs/" + backgrounds[e][0] + ")"
+                "url(" + siteRoot + "img/backs/" + backgrounds[e] + ")"
+            )//,
+            //$("#background-game").text(backgrounds[e][1]),
+            //$("#background-system").text(backgrounds[e][3]);
     }
 }
 
@@ -262,23 +265,6 @@ var Client = {
         }
     },
     current_background = 0,
-    backgrounds = [
-        // file       system       game
-        ["01.gif", "PC-98", "", "Possessioner", ""],
-        ["02.gif", "PC-98", "", "Policenauts", ""],
-        ["03.gif", "PC-98", "", "Policenauts", ""],
-        ["04.gif", "PC-98", "", "Ballade for Maria", ""],
-        [
-            "05.jpg",
-            "PC-98",
-            "",
-            "Uchū no Kishi Tekkaman Blade: Orbital Ring Dakkai Sakusen",
-            ""
-        ],
-        ["06.gif", "FM-Towns", "", "Red", ""],
-        ["07.gif", "PC-98(?)", "", "Unknown", ""],
-        ["08.jpg", "PC-98", "", "Doop", ""]
-    ],
     canvasContext = {},
     canvasWidth = 0,
     canvasHeight = 0,
