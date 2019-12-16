@@ -5,17 +5,17 @@ Fill this out and all your dreams will come true */
 /*URL Prefix for the radio
        For example, if your site's URL is https://based.zone ,
        siteroot = "/radio" would setup basedradio at https://based.zone/radio */
-var siteRoot = "/";
+var siteRoot = "";
 // Site Title
-var siteTitle = "Viper Radio";
+var siteTitle = "";
 // Directory where the radio files reside at
-var radioFiles = "https://based.zone/filehost/radiofiles";
+var radioFiles = "";
 // Opus Audio Source (Casted through Icecast or similar)
-var opusStream = "https://radio.based.zone/files/viper.ogg";
+var opusStream = "";
 // MP3 Audio Source (not as good as Opus)
-var mp3Stream = "https://radio.based.zone/files/basedvgm.mp3";
+var mp3Stream = "";
 // Link to BasedRadio API
-var apiLink = "https://api.based.zone/viperstatus";
+var apiLink = "";
 
 var backgrounds = [
     
@@ -464,7 +464,7 @@ var Client = {
         $player_artist.html(song.game),
             $player_title.html(song.title),
             $player_artwork.attr("src", radioFiles + "/" + song.artwork),
-            $song_dl_link.attr("href", "https://based.zone/" + song.link),
+            $song_dl_link.attr("href", "/" + song.link),
             $more_title.text("Title: " + more.title),
             $more_game.text("Game: " + more.game),
             $more_year.text("Year: " + more.year),
