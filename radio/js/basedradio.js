@@ -58,7 +58,7 @@ function updateBackground(e) {
         )
             return (
                 $("body").css("background-image", "none"),
-                $("#background-id").html("Solid"),
+                $("#background-id").html("Solid")//,
                 //$("#background-game").text("Windows 95"),
                 //$("#background-system").text("Yes")
             );
