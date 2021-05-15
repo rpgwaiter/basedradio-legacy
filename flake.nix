@@ -6,18 +6,16 @@
   outputs = { self, nixpkgs }: let
     pkgs = nixpkgs.legacyPackages.x86_64-linux;
   in {
-    packages.x86_64-linux.basedradio = pkgs.yarn2nix-moretea.mkYarnPackage {
-      name = "basedradio";
-      src = ./.;
-      packageJSON = ./package.json;
-      yarnLock = ./yarn.lock;
-      yarnNix = ./yarn.nix;
-    };
+    packages.x86_64-linux.basedradio = (pkgs.callPackage ./default.nix {});
 
-    devShell.x86_64-linux =
-        pkgs.mkShell { buildInputs = [ 
-          #self.packages.x86_64-linux.basedradio 
-          pkgs.yarn 
-        ]; };
+    devShell.x86_64-linux = with pkgs;
+        mkShell { 
+          buildInputs = [ 
+            #self.packages.x86_64-linux.basedradio 
+            yarn
+            yarn2nix
+            nodePackages.node2nix
+          ]; 
+        };
   };
 }
