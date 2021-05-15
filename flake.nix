@@ -5,8 +5,6 @@
 
   outputs = { self, nixpkgs }: let
     pkgs = nixpkgs.legacyPackages.x86_64-linux;
-    callPackage = pkgs.callPackage;
-  
   in {
     packages.x86_64-linux.basedradio = pkgs.yarn2nix-moretea.mkYarnPackage {
       name = "basedradio";
