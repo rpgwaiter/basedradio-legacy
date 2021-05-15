@@ -55,8 +55,8 @@
 
 .win98 .window .content {
     padding: 3px;
-    margin: 0 1px;
-    border: 1px solid gray;
+    margin: 1px 1px 0;
+    border: 1px solid;
     border-right-color: #fff;
     border-bottom-color: #fff;
 }
@@ -437,7 +437,7 @@
 }
 
 .win98 .window .header .icon {
-    background: url(../img/icons/favicon-32x32.png) no-repeat;
+    background: url("img/icons/favicon-32x32.png") no-repeat;
     background-size: cover;
 }
 
