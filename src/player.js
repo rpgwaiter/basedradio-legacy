@@ -6,7 +6,7 @@ import vol from './img/volume.png';
 
 import './based98.css';
 
-import './App.css';
+import './app.css';
 
 
 function ButtonMinimize() {
