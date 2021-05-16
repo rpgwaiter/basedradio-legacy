@@ -11,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Builder
-      run: docker build . --file Dockerfile.builder --tag builder:$(date +%s)
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag basedradio:$(date +%s)
     - name: Push to Docker Hub
