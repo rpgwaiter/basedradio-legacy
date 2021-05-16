@@ -7,7 +7,7 @@
     pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
   in {
-    packages.x86_64-linux.basedradio = pkgs.yarn2nix.mkYarnPackage {
+    packages.x86_64-linux.basedradio = pkgs.mkYarnPackage {
       name = "basedradio";
       src = ./.;
       packageJSON = ./package.json;
