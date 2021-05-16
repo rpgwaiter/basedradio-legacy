@@ -221,10 +221,6 @@ function WinForm() {
 }
 
 function VGMPlayer() {
-//   constructor(stream) {
-//       this.streamURL = stream;
-//   }
-
   return (
     <div class="frame row align-items-center">
         <WinForm />

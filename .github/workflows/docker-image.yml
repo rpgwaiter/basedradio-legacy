@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Docker CI
 
 on:
   push:
@@ -9,6 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      REACT_APP_STREAM_URL: http://cast.based.radio/vgm.ogg
     steps:
     - 
       uses: actions/checkout@v2
@@ -28,7 +30,7 @@ jobs:
       uses: docker/login-action@v1
       with:
         username: rpgwaiter
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
     -
       name: Push to Docker Hub
       uses: docker/build-push-action@v2
