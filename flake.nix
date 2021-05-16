@@ -8,7 +8,7 @@
 
   in {
     packages.x86_64-linux.basedradio = pkgs.yarn2nix.mkYarnPackage {
-      name = "basedcradio";
+      name = "basedradio";
       src = ./.;
       packageJSON = ./package.json;
       yarnLock = ./yarn.lock;
