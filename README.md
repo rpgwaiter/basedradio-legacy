@@ -20,7 +20,7 @@
   <h1 align="center">BasedRadio</h1>
 
   <p align="center">
-    WebUI for BasedCast streams
+    WebUI for <a href="https://github.com/rpgwaiter/basedcast">BasedCast </a>Streams
     <br />
     <a href="https://github.com/rpgwaiter/basedradio"><strong>Explore the docs »</strong></a>
     <br />
@@ -45,13 +45,9 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#development">Development</a></li>
+    <li><a href="#nix">Nix</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -63,14 +59,14 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+<!-- ABOUT -->
+## About BasedRadio
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`rpgwaiter`, `basedradio`, `twitter_handle`, `email`, `project_title`, `project_description`
+BasedRadio is a WebUI for use with a <a href="https://github.com/rpgwaiter/basedcast">BasedCast</a> instance. With cast/radio, one can easily stand up their own video game music streaming site. 
+
+The official instance is hosted at https://based.radio. Project is in early-alpha.
 
 
 ### Built With
@@ -147,6 +143,7 @@ By default, BasedRadio (and the builds on dockerhub) are setup to use the offici
 ## Roadmap
 * GraphQL Client
 * Login
+* Monolith container with radio/cast/db
 
 See the [open issues](https://github.com/rpgwaiter/basedradio/issues) for a list of proposed features (and known issues).
 
