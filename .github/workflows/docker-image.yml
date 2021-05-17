@@ -32,10 +32,12 @@ jobs:
         username: rpgwaiter
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     -
+      name: Rename .env
+      run: |
+        mv .env.example .env
+    -
       name: Build container and push to Docker Hub
       uses: docker/build-push-action@v2
-      run: |
-        cp .env.example .env
       with:
         context: .
         push: true
