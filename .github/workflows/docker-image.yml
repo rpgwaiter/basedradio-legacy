@@ -33,8 +33,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     -
       name: Rename .env
-      run: |
-        mv .env.example .env
+      run: mv .env.example .env
     -
       name: Build container and push to Docker Hub
       uses: docker/build-push-action@v2
