@@ -8,6 +8,8 @@ import './based98.css';
 
 import './app.css';
 
+import '../env-config';
+
 
 function ButtonMinimize() {
     return(
@@ -135,7 +137,7 @@ function PlayerContent() {
     // const [currentVol, setCurrentVol] = useState(0); // 0-100
 
     // const api_url = process.env.REACT_APP_API_URL;
-    const stream_url = process.env.REACT_APP_STREAM_URL;
+    const stream_url = window._env_.STREAM_URL;
 
     const constructAudio = () => {
         context.resume().then(function() {
