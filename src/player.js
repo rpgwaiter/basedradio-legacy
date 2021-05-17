@@ -8,7 +8,7 @@ import './based98.css';
 
 import './app.css';
 
-import '../env-config';
+import './env-config';
 
 
 function ButtonMinimize() {
