@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import ReactDOM from 'react-dom';
 
-import logo from './windows95_logo.png';
+import logo from './img/icons/windows95_logo.png';
 import vol from './img/volume.png';
 
 import './based98.css';
